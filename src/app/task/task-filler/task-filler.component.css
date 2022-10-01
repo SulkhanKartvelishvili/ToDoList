@@ -1,0 +1,17 @@
+.submitBtn{
+    background: black;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+input{
+    border-radius: 3px;
+    border-width: thin;
+}
+label{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    color: #607D8B;
+    font-size: 15px;
+    font-weight: 900;
+}

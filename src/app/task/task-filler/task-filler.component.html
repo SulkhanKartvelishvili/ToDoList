@@ -1,0 +1,34 @@
+<div class="col-md-10 ms-auto">
+    <label>Enter Task</label>
+    <div class="form-group">
+        <input type="text" placeholder="Task Name" [(ngModel)]="task.name">
+    </div>
+    <br>
+    <label>Enter Day</label>
+    <div class="form-group">
+       
+        <!-- <input type="date" [(ngModel)]="task.date"> -->
+        <select [(ngModel)]="task.day">
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+           
+            <option value="saturday">Saturday</option>
+        </select>
+       
+    </div>
+    <br>
+    <label>Enter Time</label>
+    <div class="form-group">
+       
+    <input type="time" [(ngModel)]="task.stime" >
+    <input type="time" [(ngModel)]="task.etime" >
+</div>
+<br>
+<div class="form-group">
+    <input type="submit" class="submitBtn"(click)="addTask()">
+</div>
+</div>

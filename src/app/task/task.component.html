@@ -1,0 +1,156 @@
+<br>
+<section class="col-md-12 m-auto d-flex justify-content-between">
+    <aside class="left col-md-4">
+<app-task-filler (onTaskSaveEmitter)="onTaskSaveSubs($event)"></app-task-filler>
+</aside>
+<aside class="right col-md-8">
+
+
+<div class="weekDays" cdkDropListGroup>
+ 
+
+  
+  
+  
+                            <div class="card weekDayCard" style="width: 18rem;" >
+                                
+                                  <h4>Sunday</h4>
+                               
+                                <div class="list-group list-group-flush"  cdkDropList [cdkDropListData]="sunday"   (cdkDropListDropped)="drop($event)"  >
+                                  
+                               
+                                    <div class="list-group-item" *ngFor="let task of sunday, let i = index" cdkDrag   [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                  <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                  <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                                                                        </div>
+                                    
+                                  
+                               
+                                </div>
+                              </div>
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4>Monday</h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="monday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of monday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+        
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4 >
+                                  Tuesday
+                                </h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="tuesday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of tuesday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+              
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4 >
+                                  Wednesday
+                                </h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="wednesday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of wednesday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon  class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+                     
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4 >
+                                  Thursday
+                                </h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="thursday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of thursday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4 >
+                                  Friday
+                                </h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="friday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of friday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+                              
+                              <div class="card weekDayCard" style="width: 18rem;">
+                                <h4 >
+                                  Saturday
+                                </h4>
+                                <div class="list-group list-group-flush" cdkDropList [cdkDropListData]="saturday"   (cdkDropListDropped)="drop($event)">
+                            
+                                
+                                    <div class="list-group-item" *ngFor="let task of saturday, let i = index" cdkDrag [ngStyle]="{'background': task.type == 3 ? '#2a9d8f' : (task.type == 2 ? '#ffc300' :  null)}   ">
+                                      <h6>{{task.name}}</h6>
+                                      <h6>{{task.stime}} - {{task.etime}}</h6> 
+                                  <button (click)="changeStatusToDone( task.id)" > <fa-icon [icon]="faCheck"></fa-icon></button>
+                                  <button (click)="changeStatusToInProgress(task.id)" > <fa-icon [icon]="faSpinner"></fa-icon></button>
+                                    <button (click)="deleteTask(i, task.id)" > <fa-icon class="delete" [icon]="faTrash"></fa-icon></button>
+                                
+                                    
+                                  </div>
+                               
+                                </div>
+                              </div>
+
+
+                  
+    </div>
+
+</aside>

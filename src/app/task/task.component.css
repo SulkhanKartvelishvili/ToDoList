@@ -1,0 +1,48 @@
+.weekDays{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.weekDayCard{
+    min-height: 300px;
+    background-color: white;
+    border: #adb5bd;
+    border-width: 1px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-style: groove;
+    
+}
+.weekDayCard h6{
+    color:white;
+}
+.list-group-item{
+    background-color: #22577a;
+}
+h4{
+    
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.list-group-item button{
+    background: transparent;
+    border: none;
+}
+.delete{
+    color:red!important;
+}
+svg.svg-inline--fa.fa-check {
+    color: white;
+}
+fa-icon.ng-fa-icon {
+    color: white;
+}
+
+.cdk-drag.list-group-item {
+border-radius: 0px;
+}
+.card.weekDayCard {
+border-radius: 0px;
+}
